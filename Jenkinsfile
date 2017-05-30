@@ -1,5 +1,5 @@
 pipeline {
-    agent jenkinsmaster
+    agent { jenkinsmaster }
 
     stages {
       stage('build') {
