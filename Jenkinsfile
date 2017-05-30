@@ -9,8 +9,8 @@ pipeline {
       }      
       stage('deploy') {
           steps {
-              sh 'chmod 655 /var/lib/jenkins/workspace/pipeline-project/target/*.war'
-              sh 'cp -r /var/lib/jenkins/workspace/pipeline-project/target/*.war /opt/tomcat7/webapps/'
+              sh 'cd /var/lib/jenkins/workspace/pipeline-project/target/; sudo chmod 655 *.war'
+              sh 'sudo cp -r /var/lib/jenkins/workspace/pipeline-project/target/*.war /opt/tomcat7/webapps/'
           }          
       }
     }
