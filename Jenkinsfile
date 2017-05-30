@@ -9,7 +9,7 @@ pipeline {
       }      
       stage('deploy') {
           steps {
-            sh 'cp /var/lib/jenkins/workspace/pipeline-project/target/*.war /opt/tomcat7/webapps/'
+            sh 'cp -r /var/lib/jenkins/workspace/pipeline-project/target/*.war /opt/tomcat7/webapps/'
           }          
       }
     }
